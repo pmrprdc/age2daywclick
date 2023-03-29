@@ -9,13 +9,20 @@ import TensSelector from './components/TensSelector'
 function App() {
 
 
+  const [firstDigit, setFirstDigit] = useState(1)
+  const [secondDigit, setSecondDigit] = useState(2)
+
   return (
     <div className="App">
-      <DisplayScreen />
+      <DisplayScreen firstDigit={firstDigit} 
+      secondDigit={secondDigit} />
       <h1>How old are you ?</h1>
-      <TensSelector/>
-      <OnesSelector/>
-
+      <TensSelector 
+       setFirstDigit={setFirstDigit}/>
+      <OnesSelector 
+      setSecondDigit={setSecondDigit}
+      />
+      <button>Convert Age 2 Days</button>
       <button>Restart</button>
     </div>
   )

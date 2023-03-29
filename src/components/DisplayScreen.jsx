@@ -1,7 +1,7 @@
 
 
-export default function DisplayScreen () {
+export default function DisplayScreen (props) {
+    const {firstDigit, secondDigit} = props;
 
-
-    return <h1>Display</h1>
+    return <h1>{firstDigit}{secondDigit}</h1>
 }
